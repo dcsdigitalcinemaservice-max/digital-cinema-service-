@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="f-KgLki-oQDqI6cE_WJRX9qmSqCyfyKjsm5syvkSDgg" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Cinema Service</title>
@@ -163,6 +162,15 @@
             display: block;
         }
 
+        .category-subtitle {
+            text-align: center;
+            color: var(--gold);
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            margin: 30px 0 20px;
+            letter-spacing: 1px;
+        }
+
         .red-line-anim {
             width: 60px;
             height: 4px;
@@ -183,6 +191,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 25px;
+            margin-bottom: 40px;
         }
 
         .product-card {
@@ -204,44 +213,21 @@
             box-shadow: 0 5px 20px rgba(229, 9, 20, 0.3);
         }
 
-        /* Available Status Badge */
-        .status-badge {
+        /* Product Number Badge */
+        .product-badge {
             position: absolute;
             top: 12px;
-            right: 12px;
-            font-size: 0.75rem;
+            left: 12px;
+            background: var(--red);
+            color: #fff;
+            font-size: 0.8rem;
             font-weight: bold;
-            padding: 4px 8px;
-            border-radius: 10px;
-            text-transform: uppercase;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
-            gap: 5px;
-        }
-
-        .status-badge.available {
-            background: rgba(0, 230, 118, 0.15);
-            color: #00e676;
-            border: 1px solid #00e676;
-        }
-
-        .status-badge.unavailable {
-            background: rgba(255, 23, 68, 0.15);
-            color: #ff1744;
-            border: 1px solid #ff1744;
-        }
-
-        .status-dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background-color: currentColor;
-            animation: blinkDot 1.2s infinite;
-        }
-
-        @keyframes blinkDot {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.3; }
+            justify-content: center;
         }
 
         .product-img-wrapper {
@@ -263,23 +249,20 @@
         }
 
         .product-title {
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: bold;
             color: #fff;
-            margin-bottom: 5px;
-        }
-
-        .product-price {
-            color: var(--gold);
-            font-size: 1.2rem;
-            font-weight: bold;
             margin-bottom: 12px;
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .btn-buy {
             background-color: var(--green);
             color: white;
-            border: none;
+            text-decoration: none;
             padding: 10px;
             border-radius: 6px;
             font-weight: bold;
@@ -289,7 +272,7 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
 
         .btn-buy:hover { opacity: 0.9; }
@@ -443,100 +426,148 @@
 
     <div class="container">
 
-        <!-- PRODUCTS SECTION -->
+        <!-- UPDATED PRODUCTS SECTION -->
         <section id="products">
-            <h2 class="section-title">Products</h2>
+            <h2 class="section-title">Our Products</h2>
             <div class="red-line-anim"></div>
+
+            <!-- NEW PRODUCTS CATEGORY -->
+            <h3 class="category-subtitle">NEW PRODUCTS</h3>
             <div class="product-grid">
 
-                <!-- 1 -->
+                <!-- NEW 1 -->
                 <div class="product-card">
-                    <div class="status-badge available"><span class="status-dot"></span> Available</div>
-                    <div class="product-img-wrapper"><img src="3d glass.png" alt="3D Glass" class="product-img"></div>
-                    <div class="product-title">XPAND X105-RF</div>
-                    <div class="product-price">₹12,500</div>
-                    <button class="btn-buy" onclick="buyProduct('XPAND X105-RF 3D Glass', '₹12,500')"><i class="fa-brands fa-whatsapp"></i> Buy</button>
+                    <span class="product-badge">1</span>
+                    <div class="product-img-wrapper"><img src="new1.jpg" alt="NEW 1" class="product-img"></div>
+                    <div class="product-title">DOLBY DIGITAL CINEMA PROCESSOR CP750</div>
+                    <a href="https://wa.me/919335467011?text=Hi,%20I%20am%20interested%20in%20DOLBY%20DIGITAL%20CINEMA%20PROCESSOR%20CP750" class="btn-buy" target="_blank"><i class="fa-brands fa-whatsapp"></i> Buy / Inquiry</a>
                 </div>
 
-                <!-- 2 -->
+                <!-- NEW 2 -->
                 <div class="product-card">
-                    <div class="status-badge available"><span class="status-dot"></span> Available</div>
-                    <div class="product-img-wrapper"><img src="jbl 5732.png" alt="JBL 5732" class="product-img"></div>
-                    <div class="product-title">JBL 5732</div>
-                    <div class="product-price">₹1,45,000</div>
-                    <button class="btn-buy" onclick="buyProduct('JBL 5732 Cinema Speaker', '₹1,45,000')"><i class="fa-brands fa-whatsapp"></i> Buy</button>
+                    <span class="product-badge">2</span>
+                    <div class="product-img-wrapper"><img src="new2.jpg" alt="NEW 2" class="product-img"></div>
+                    <div class="product-title">SONY VPL-CXZ10 5000 LUMENS XGA LASER PROJECTOR</div>
+                    <a href="https://wa.me/919335467011?text=Hi,%20I%20am%20interested%20in%20SONY%20VPL-CXZ10%205000%20LUMENS%20XGA%20LASER%20PROJECTOR" class="btn-buy" target="_blank"><i class="fa-brands fa-whatsapp"></i> Buy / Inquiry</a>
                 </div>
 
-                <!-- 3 -->
+                <!-- NEW 3 -->
                 <div class="product-card">
-                    <div class="status-badge available"><span class="status-dot"></span> Available</div>
-                    <div class="product-img-wrapper"><img src="crown dsi 2000.png" alt="Crown DSi 2000" class="product-img"></div>
-                    <div class="product-title">Crown DSi 2000</div>
-                    <div class="product-price">₹85,000</div>
-                    <button class="btn-buy" onclick="buyProduct('Crown DSi 2000 Power Amplifier', '₹85,000')"><i class="fa-brands fa-whatsapp"></i> Buy</button>
+                    <span class="product-badge">3</span>
+                    <div class="product-img-wrapper"><img src="new3.jpg" alt="NEW 3" class="product-img"></div>
+                    <div class="product-title">JBL 4642A CINEMA SUBWOOFER</div>
+                    <a href="https://wa.me/919335467011?text=Hi,%20I%20am%20interested%20in%20JBL%204642A%20CINEMA%20SUBWOOFER" class="btn-buy" target="_blank"><i class="fa-brands fa-whatsapp"></i> Buy / Inquiry</a>
                 </div>
 
-                <!-- 4 -->
+                <!-- NEW 4 -->
                 <div class="product-card">
-                    <div class="status-badge available"><span class="status-dot"></span> Available</div>
-                    <div class="product-img-wrapper"><img src="dolby cp950.png" alt="Dolby CP950" class="product-img"></div>
-                    <div class="product-title">Dolby CP950</div>
-                    <div class="product-price">₹2,10,000</div>
-                    <button class="btn-buy" onclick="buyProduct('Dolby CP950 Cinema Audio Processor', '₹2,10,000')"><i class="fa-brands fa-whatsapp"></i> Buy</button>
+                    <span class="product-badge">4</span>
+                    <div class="product-img-wrapper"><img src="new4.jpg" alt="NEW 4" class="product-img"></div>
+                    <div class="product-title">JBL 3732 THREE-WAY CINEMA SPEAKER</div>
+                    <a href="https://wa.me/919335467011?text=Hi,%20I%20am%20interested%20in%20JBL%203732%20THREE-WAY%20CINEMA%20SPEAKER" class="btn-buy" target="_blank"><i class="fa-brands fa-whatsapp"></i> Buy / Inquiry</a>
                 </div>
 
-                <!-- 5 -->
+                <!-- NEW 5 -->
                 <div class="product-card">
-                    <div class="status-badge available"><span class="status-dot"></span> Available</div>
-                    <div class="product-img-wrapper"><img src="barco dp2k-10s.png" alt="Barco DP2K-10S" class="product-img"></div>
-                    <div class="product-title">Barco DP2K-10S</div>
-                    <div class="product-price">₹8,50,000</div>
-                    <button class="btn-buy" onclick="buyProduct('Barco DP2K-10S Projector', '₹8,50,000')"><i class="fa-brands fa-whatsapp"></i> Buy</button>
+                    <span class="product-badge">5</span>
+                    <div class="product-img-wrapper"><img src="new5.jpg" alt="NEW 5" class="product-img"></div>
+                    <div class="product-title">COMPACT 2-WAY LOUDSPEAKER</div>
+                    <a href="https://wa.me/919335467011?text=Hi,%20I%20am%20interested%20in%20COMPACT%202-WAY%20LOUDSPEAKER" class="btn-buy" target="_blank"><i class="fa-brands fa-whatsapp"></i> Buy / Inquiry</a>
                 </div>
 
-                <!-- 6 -->
+                <!-- NEW 6 -->
                 <div class="product-card">
-                    <div class="status-badge available"><span class="status-dot"></span> Available</div>
-                    <div class="product-img-wrapper"><img src="harkness perlux 240.png" alt="Harkness Perlux 240" class="product-img"></div>
-                    <div class="product-title">Harkness Perlux 240</div>
-                    <div class="product-price">₹1,25,000</div>
-                    <button class="btn-buy" onclick="buyProduct('Harkness Perlux 240 Screen', '₹1,25,000')"><i class="fa-brands fa-whatsapp"></i> Buy</button>
+                    <span class="product-badge">6</span>
+                    <div class="product-img-wrapper"><img src="new6.jpg" alt="NEW 6" class="product-img"></div>
+                    <div class="product-title">JBL 4732 THREE WAY CINEMA SPEAKER</div>
+                    <a href="https://wa.me/919335467011?text=Hi,%20I%20am%20interested%20in%20JBL%204732%20THREE%20WAY%20CINEMA%20SPEAKER" class="btn-buy" target="_blank"><i class="fa-brands fa-whatsapp"></i> Buy / Inquiry</a>
                 </div>
 
-                <!-- 7 -->
+                <!-- NEW 7 -->
                 <div class="product-card">
-                    <div class="status-badge available"><span class="status-dot"></span> Available</div>
-                    <div class="product-img-wrapper"><img src="jbl 4642a.png" alt="JBL 4642A" class="product-img"></div>
-                    <div class="product-title">JBL 4642A</div>
-                    <div class="product-price">₹1,15,000</div>
-                    <button class="btn-buy" onclick="buyProduct('JBL 4642A Subwoofer', '₹1,15,000')"><i class="fa-brands fa-whatsapp"></i> Buy</button>
+                    <span class="product-badge">7</span>
+                    <div class="product-img-wrapper"><img src="new7.jpg" alt="NEW 7" class="product-img"></div>
+                    <div class="product-title">GETD 3D GLASSES (STANDARD SIZE)</div>
+                    <a href="https://wa.me/919335467011?text=Hi,%20I%20am%20interested%20in%20GETD%203D%20GLASSES%20(STANDARD%20SIZE)" class="btn-buy" target="_blank"><i class="fa-brands fa-whatsapp"></i> Buy / Inquiry</a>
                 </div>
 
-                <!-- 8 -->
+                <!-- NEW 8 -->
                 <div class="product-card">
-                    <div class="status-badge available"><span class="status-dot"></span> Available</div>
-                    <div class="product-img-wrapper"><img src="dolby ims3000.png" alt="Dolby IMS3000" class="product-img"></div>
-                    <div class="product-title">Dolby IMS3000</div>
-                    <div class="product-price">₹3,40,000</div>
-                    <button class="btn-buy" onclick="buyProduct('Dolby IMS3000 Media Server', '₹3,40,000')"><i class="fa-brands fa-whatsapp"></i> Buy</button>
+                    <span class="product-badge">8</span>
+                    <div class="product-img-wrapper"><img src="new8.jpg" alt="NEW 8" class="product-img"></div>
+                    <div class="product-title">SONY VPL-CXZ10 LASER PROJECTOR</div>
+                    <a href="https://wa.me/919335467011?text=Hi,%20I%20am%20interested%20in%20SONY%20VPL-CXZ10%20LASER%20PROJECTOR" class="btn-buy" target="_blank"><i class="fa-brands fa-whatsapp"></i> Buy / Inquiry</a>
                 </div>
 
-                <!-- 9 -->
+                <!-- NEW 9 -->
                 <div class="product-card">
-                    <div class="status-badge available"><span class="status-dot"></span> Available</div>
-                    <div class="product-img-wrapper"><img src="gdc cla-2000.png" alt="GDC CLA-2000" class="product-img"></div>
-                    <div class="product-title">GDC CLA-2000</div>
-                    <div class="product-price">₹95,000</div>
-                    <button class="btn-buy" onclick="buyProduct('GDC CLA-2000 Controller', '₹95,000')"><i class="fa-brands fa-whatsapp"></i> Buy</button>
+                    <span class="product-badge">9</span>
+                    <div class="product-img-wrapper"><img src="new9.jpg" alt="NEW 9" class="product-img"></div>
+                    <div class="product-title">DOLBY ATMOS CINEMA PROCESSOR CP950A</div>
+                    <a href="https://wa.me/919335467011?text=Hi,%20I%20am%20interested%20in%20DOLBY%20ATMOS%20CINEMA%20PROCESSOR%20CP950A" class="btn-buy" target="_blank"><i class="fa-brands fa-whatsapp"></i> Buy / Inquiry</a>
                 </div>
 
-                <!-- 10 -->
+                <!-- NEW 10 -->
                 <div class="product-card">
-                    <div class="status-badge available"><span class="status-dot"></span> Available</div>
-                    <div class="product-img-wrapper"><img src="apc smart-ups smt3000i.png" alt="APC Smart-UPS" class="product-img"></div>
-                    <div class="product-title">APC SMT3000I</div>
-                    <div class="product-price">₹65,000</div>
-                    <button class="btn-buy" onclick="buyProduct('APC Smart-UPS SMT3000I', '₹65,000')"><i class="fa-brands fa-whatsapp"></i> Buy</button>
+                    <span class="product-badge">10</span>
+                    <div class="product-img-wrapper"><img src="new10.jpg" alt="NEW 10" class="product-img"></div>
+                    <div class="product-title">JBL CPI 2000 CINEMA PROCESSOR</div>
+                    <a href="https://wa.me/919335467011?text=Hi,%20I%20am%20interested%20in%20JBL%20CPI%202000%20CINEMA%20PROCESSOR" class="btn-buy" target="_blank"><i class="fa-brands fa-whatsapp"></i> Buy / Inquiry</a>
+                </div>
+
+            </div>
+
+            <!-- OLD / SECOND HAND PRODUCTS CATEGORY -->
+            <h3 class="category-subtitle">OLD / SECOND HAND PRODUCTS</h3>
+            <div class="product-grid">
+
+                <!-- OLD 1 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper"><img src="usl1.jpg" alt="USL1" class="product-img"></div>
+                    <div class="product-title">USL JSD-60 CINEMA PROCESSOR</div>
+                    <a href="https://wa.me/919335467011?text=Hi,%20I%20am%20interested%20in%20USL%20JSD-60%20CINEMA%20PROCESSOR" class="btn-buy" target="_blank"><i class="fa-brands fa-whatsapp"></i> Buy / Inquiry</a>
+                </div>
+
+                <!-- OLD 2 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper"><img src="usl2.jpg" alt="USL2" class="product-img"></div>
+                    <div class="product-title">USL JSD-60 CINEMA PROCESSOR</div>
+                    <a href="https://wa.me/919335467011?text=Hi,%20I%20am%20interested%20in%20USL%20JSD-60%20CINEMA%20PROCESSOR" class="btn-buy" target="_blank"><i class="fa-brands fa-whatsapp"></i> Buy / Inquiry</a>
+                </div>
+
+                <!-- OLD 3 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper"><img src="dsi.jpg" alt="DSI" class="product-img"></div>
+                    <div class="product-title">CROWN DSI 2000 AMPLIFIER</div>
+                    <a href="https://wa.me/919335467011?text=Hi,%20I%20am%20interested%20in%20CROWN%20DSI%202000%20AMPLIFIER" class="btn-buy" target="_blank"><i class="fa-brands fa-whatsapp"></i> Buy / Inquiry</a>
+                </div>
+
+                <!-- OLD 4 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper"><img src="jbl.jpg" alt="JBL" class="product-img"></div>
+                    <div class="product-title">JBL 2414H</div>
+                    <a href="https://wa.me/919335467011?text=Hi,%20I%20am%20interested%20in%20JBL%202414H" class="btn-buy" target="_blank"><i class="fa-brands fa-whatsapp"></i> Buy / Inquiry</a>
+                </div>
+
+                <!-- OLD 5 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper"><img src="pro.jpg" alt="PRO" class="product-img"></div>
+                    <div class="product-title">PRO AUDIO</div>
+                    <a href="https://wa.me/919335467011?text=Hi,%20I%20am%20interested%20in%20PRO%20AUDIO" class="btn-buy" target="_blank"><i class="fa-brands fa-whatsapp"></i> Buy / Inquiry</a>
+                </div>
+
+                <!-- OLD 6 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper"><img src="bms.jpg" alt="BMS" class="product-img"></div>
+                    <div class="product-title">BMS 4590</div>
+                    <a href="https://wa.me/919335467011?text=Hi,%20I%20am%20interested%20in%20BMS%204590" class="btn-buy" target="_blank"><i class="fa-brands fa-whatsapp"></i> Buy / Inquiry</a>
+                </div>
+
+                <!-- OLD 7 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper"><img src="power.jpg" alt="POWER" class="product-img"></div>
+                    <div class="product-title">DOLBY CP750 EXTERNAL POWER SUPPLY</div>
+                    <a href="https://wa.me/919335467011?text=Hi,%20I%20am%20interested%20in%20DOLBY%20CP750%20EXTERNAL%20POWER%20SUPPLY" class="btn-buy" target="_blank"><i class="fa-brands fa-whatsapp"></i> Buy / Inquiry</a>
                 </div>
 
             </div>
@@ -591,7 +622,7 @@
             </div>
         </section>
 
-        <!-- CONTACT SECTION (5 FIELDS & GREEN BUTTON & RED ZOOM CALL LINK) -->
+        <!-- CONTACT SECTION -->
         <section id="contact">
             <h2 class="section-title">Contact Us</h2>
             <div class="red-line-anim"></div>
@@ -631,11 +662,6 @@
 
     <script>
         const phoneNum = "9335467011";
-
-        function buyProduct(item, price) {
-            const msg = `Hello Digital Cinema Service, I want to inquire about purchasing: ${item} (${price})`;
-            window.open(`https://wa.me/${phoneNum}?text=${encodeURIComponent(msg)}`, '_blank');
-        }
 
         function sendFormWhatsApp() {
             const name = document.getElementById('name').value;
